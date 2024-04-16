@@ -1,0 +1,9 @@
+import './pokemon-species-1.js';
+import './pokemon-species-2.js';
+import './pokemon-species-3.js';
+import './pokemon-species-4.js';
+import './pokemon-species-5.js';
+import './pokemon-species-6.js';
+import './pokemon-species-7.js';
+import './pokemon-species-8.js';
+import './pokemon-species-9.js';

@@ -1,0 +1,57 @@
+{
+	"name": "@meepen/pokeapi-static",
+	"description": "A TypeScript-enabled static PokeAPI",
+	"bugs": {
+		"url": "https://github.com/meepen/pokeapi-static/issues"
+	},
+	"keywords": [
+		"pokemon",
+		"pokeapi",
+		"static",
+		"typescript"
+	],
+	"private": false,
+	"version": "1.0.0",
+	"author": {
+		"email": "meep@meepen.dev",
+		"name": "Devin Korb",
+		"url": "https://meepen.dev"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.6.4",
+		"@types/node": "^20.12.4",
+		"@types/uglify-js": "^3.17.5",
+		"glob": "^10.3.12",
+		"pokenode-ts": "^1.20.0",
+		"rimraf": "^5.0.5",
+		"sqlite3": "^5.1.7",
+		"tsx": "^4.7.2",
+		"typescript": "^5.4.4",
+		"typescript-eslint": "^7.5.0",
+		"uglify-js": "^3.17.4"
+	},
+	"type": "module",
+	"main": "src/index.js",
+	"types": "src/index.d.ts",
+	"bin": "./src/bin.js",
+	"scripts": {
+		"pregenerate": "rimraf -g src/generated/*.ts src/**/*.{d.ts,js,js.map}",
+		"generate": "tsx generator/main.ts",
+		"postgenerate": "npm run lint:fix",
+		"prebuild": "npm run generate",
+		"build": "tsc",
+		"postbuild": "tsx generator/uglify.ts",
+		"build:dev": "tsx generator/main.ts",
+		"lint": "biome lint .",
+		"lint:fix": "biome format . --write"
+	},
+	"files": [
+		"src/**/*.{js,d.ts,js.map}",
+		"cache/images",
+		"generator/file-structure.js"
+	],
+	"exports": {
+		".": "./src/index.js",
+		"./package.json": "./package.json"
+	}
+}

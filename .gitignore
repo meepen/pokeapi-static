@@ -1,0 +1,10 @@
+cache
+node_modules
+image-provider
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+generator/**/*.js
+generator/**/*.js.map
+generator/**/*.d.ts
+/*.tgz

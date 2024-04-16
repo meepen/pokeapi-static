@@ -1,0 +1,23 @@
+// AUTO GENERATED FILE
+export enum Type {
+	Normal = 1,
+	Fighting,
+	Flying,
+	Poison,
+	Ground,
+	Rock,
+	Bug,
+	Ghost,
+	Steel,
+	Fire,
+	Water,
+	Grass,
+	Electric,
+	Psychic,
+	Ice,
+	Dragon,
+	Dark,
+	Fairy,
+	Unknown = 10001,
+	Shadow,
+}
